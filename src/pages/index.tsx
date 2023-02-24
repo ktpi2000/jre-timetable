@@ -1,4 +1,4 @@
-import { Container, Input, Space } from '@mantine/core';
+import { Container, Input, Paper, Space, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import { LineItem } from '../components/lineItem/LineItem';
 
@@ -22,6 +22,10 @@ export const HomePage = () => {
 
   return (
     <Container size="xs">
+      <Title order={1}>JREast Digital Timetable</Title>
+
+      <Space h="sm" />
+
       <Input
         value={keyword}
         onChange={(event) => setKeyword(event.currentTarget.value)}
@@ -34,6 +38,14 @@ export const HomePage = () => {
           <LineItem key={index} name={item.name} weekdays={item.weekdays} holiday={item.holiday} />
         </div>
       ))}
+
+      <Space h="md" />
+
+      <Paper shadow="xs" p="md" withBorder>
+        <Text>
+          ⚠️このサイトは公式サイトではありません。あくまでも個人が制作した非公式のサイトです。
+        </Text>
+      </Paper>
     </Container>
   );
 };
