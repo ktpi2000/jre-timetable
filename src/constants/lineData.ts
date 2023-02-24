@@ -15,4 +15,14 @@ export const lineData: Line[] = [
     weekday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/630d1.html#time_0',
     holiday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/630d2.html#time_0',
   },
+  {
+    name: '山手線(内回り)',
+    weekday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/630u1.html',
+    holiday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/630u2.html',
+  },
+  {
+    name: '横須賀線(上り)',
+    weekday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/222u1.html',
+    holiday_url: 'https://www.jreast-timetable.jp/2302/timetable-v/222u2.html',
+  },
 ];
