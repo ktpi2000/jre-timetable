@@ -1,24 +1,12 @@
 import { Container, Input, Paper, Space, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import { LineItem } from '../components/lineItem/LineItem';
-
-const list = [
-  {
-    name: '東海道線',
-    weekdays: 'https://fjfjfjjf',
-    holiday: 'https://jfkkl',
-  },
-  {
-    name: '横須賀線',
-    weekdays: 'https://fjfjfjjf',
-    holiday: 'https://jfkkl',
-  },
-];
+import { lineData } from '../constants/lineData';
 
 export const HomePage = () => {
   const [keyword, setKeyword] = useState('');
 
-  const filteredList = list.filter((line) => new RegExp(keyword).test(line.name));
+  const filteredList = lineData.filter((line) => new RegExp(keyword).test(line.name));
 
   return (
     <Container size="xs">
@@ -35,7 +23,12 @@ export const HomePage = () => {
       {filteredList.map((item, index) => (
         <div>
           <Space h="sm" />
-          <LineItem key={index} name={item.name} weekdays={item.weekdays} holiday={item.holiday} />
+          <LineItem
+            key={index}
+            name={item.name}
+            weekdays={item.weekday_url}
+            holiday={item.holiday_url}
+          />
         </div>
       ))}
 
