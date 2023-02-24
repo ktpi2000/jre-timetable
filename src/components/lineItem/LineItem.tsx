@@ -9,16 +9,16 @@ interface Props {
 export const LineItem = ({ name, weekdays, holiday }: Props) => (
   <Card>
     <Flex justify="space-between" align="center">
-      <Text size="md" weight={800}>
+      <Text size="lg" weight={800}>
         {name}
       </Text>
 
       <Group>
-        <Button component="a" href={weekdays}>
+        <Button component="a" href={weekdays} color="blue.5">
           平日
         </Button>
 
-        <Button component="a" href={holiday}>
+        <Button component="a" href={holiday} color="pink.5">
           休日
         </Button>
       </Group>
