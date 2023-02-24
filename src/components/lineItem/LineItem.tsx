@@ -1,4 +1,4 @@
-import { Button, Card, Group, Text } from '@mantine/core';
+import { Button, Card, Flex, Group, Text } from '@mantine/core';
 
 interface Props {
   name: string;
@@ -8,18 +8,20 @@ interface Props {
 
 export const LineItem = ({ name, weekdays, holiday }: Props) => (
   <Card>
-    <Group>
+    <Flex justify="space-between" align="center">
       <Text size="md" weight={800}>
         {name}
       </Text>
 
-      <Button component="a" href={weekdays}>
-        平日
-      </Button>
+      <Group>
+        <Button component="a" href={weekdays}>
+          平日
+        </Button>
 
-      <Button component="a" href={holiday}>
-        休日
-      </Button>
-    </Group>
+        <Button component="a" href={holiday}>
+          休日
+        </Button>
+      </Group>
+    </Flex>
   </Card>
 );
