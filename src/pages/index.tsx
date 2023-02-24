@@ -1,5 +1,5 @@
 import { Container, Input, Paper, Space, Text, Title } from '@mantine/core';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { LineItem } from '../components/lineItem/LineItem';
 import { lineData } from '../constants/lineData';
 
@@ -16,7 +16,7 @@ export const HomePage = () => {
 
       <Input
         value={keyword}
-        onChange={(event) => setKeyword(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setKeyword(event.currentTarget.value)}
         placeholder="路線名で絞り込み"
       />
 
