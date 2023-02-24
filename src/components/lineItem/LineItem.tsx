@@ -14,11 +14,11 @@ export const LineItem = ({ name, weekdays, holiday }: Props) => (
       </Text>
 
       <Group>
-        <Button component="a" href={weekdays} color="blue.5">
+        <Button component="a" href={weekdays} target="_blank" color="blue.5">
           平日
         </Button>
 
-        <Button component="a" href={holiday} color="pink.5">
+        <Button component="a" href={holiday} target="_blank" color="pink.5">
           休日
         </Button>
       </Group>
