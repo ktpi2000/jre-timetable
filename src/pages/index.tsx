@@ -15,7 +15,7 @@ const list = [
   },
 ];
 
-export default function HomePage() {
+export const HomePage = () => {
   const [keyword, setKeyword] = useState('');
 
   const filteredList = list.filter((line) => new RegExp(keyword).test(line.name));
@@ -36,4 +36,6 @@ export default function HomePage() {
       ))}
     </Container>
   );
-}
+};
+
+export default HomePage;
